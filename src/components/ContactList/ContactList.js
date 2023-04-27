@@ -62,9 +62,9 @@ const submit = id => {
   });
   return(
     <ul className={styles.contactList}>
-      {filterContacts.map(({ id, name, phone }) => (
+      {filterContacts.map(({ id, name, number }) => (
         <li key={id} className={styles.item}>
-          {name + ": " + phone}
+          {name + ": " + number}
           {
             <button
               className={styles.btn}

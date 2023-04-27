@@ -8,7 +8,7 @@ import PrivateRoute from './PrivateRoute';
 import RestrictedRoute from './RestrictedRoute';
 import { Layout } from './Layout';
 import { useEffect } from 'react';
-import { Contacts } from 'pages/Contacts';
+import { Contacts } from '../pages/Contacts';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
