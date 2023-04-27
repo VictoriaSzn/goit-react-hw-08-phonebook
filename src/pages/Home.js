@@ -1,8 +1,7 @@
-import { useAuth } from "hooks/useAuth";
 import HomeView from "views/HomeView";
 
 export default function Home() {
-  const { isLoggedIn } = useAuth();
+  //const { isLoggedIn } = useAuth();
 
   return (
      <div>

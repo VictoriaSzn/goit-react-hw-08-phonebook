@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'; 
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { lazy } from 'react';
-import { AppBar } from './AppBar';
+//import { AppBar } from './AppBar';
 import authOperations from 'redux/auth/auth-operations';
 import { useAuth } from 'hooks/useAuth';
 import PrivateRoute from './PrivateRoute';

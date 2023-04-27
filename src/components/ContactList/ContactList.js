@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../Form.module.css";
 import { useDispatch, useSelector } from "react-redux";
 //import {useGetContactsQuery, useDeleteContactMutation} from "../../redux/contacts/ContactSlice";
-import{selectFilter} from "../../redux/selector"
 import { deleteContact } from "redux/contacts/ContactsOperations";
 import { toast } from "react-toastify";
 import { confirmAlert } from "react-confirm-alert";
