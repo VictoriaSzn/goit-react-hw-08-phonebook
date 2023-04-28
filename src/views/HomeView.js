@@ -13,7 +13,7 @@ const HomeView = () => (
             To use the application, you need to log in or register. <br/>To quickly
             check the functionality, you can log in with a test login. 
         </p>
-        {/* <img src={book} alt="" width="250" className={styles.homePageImg}/> */}
+         <img src={book} alt="" width="250" className={styles.homePageImg}/>
         </div>
     </div>
 );
