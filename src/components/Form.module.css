@@ -1,8 +1,56 @@
-
+/*.body{
+  background-image: url('../images/background.png');
+  background-size: cover;
+  
+}
+.homePageImg{
+  margin-left: 50px;
+ 
+} */
+.avatar{
+  margin-right: 4px;
+ 
+}
+.name{
+  /* font-weight: 700px; */
+  margin-right: 4px;
+}
+.container{
+  min-height: calc(100vh-50ph);
+}
+.userMenuContainer{ 
+ display: flex;
+ align-items:'center';
+  
+}
+h1{
+  text-align: center;
+}
+p{
+  font-size: 24px;
+  text-align: center;
+}
+.homePage{
+  border-radius: 10px;
+  padding: 50px;
+    box-shadow: 10px 10px 101px 11px rgba(4, 34, 191, 0.75);
+}
+.page{
+  margin: 0 auto;
+  width: 520px;
+}
+.form{
+  
+   /* border: solid 1px;*/
+  border-radius: 10px; 
+  padding: 20px;
+box-shadow: 10px 10px 101px 11px rgba(4, 34, 191, 0.75);
+margin-bottom: 50px;
+}
 .label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-right: 20px;
 }
 .input {

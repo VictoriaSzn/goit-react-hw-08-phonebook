@@ -1,17 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import authOperations from "redux/auth/auth-operations";
-
-const styles = {
-    form: {
-        width: 320,
-    },
-    label: {
-        display: 'flex',
-        flexDirection: 'column',
-        marginBottom: 15,
-    },
-};
+import styles from "../components/Form.module.css";
+import Button from '@mui/material/Button';
+import { TextField } from "@mui/material";
 
 export default function LoginView() {
     const dispatch = useDispatch();
@@ -41,28 +33,37 @@ export default function LoginView() {
         setPassword('');
     };
     return (
-        <div>
+        <div className={styles.page}>
             <h1>Login page</h1>
-            <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-                <label style={styles.label}>
-                    email
-                    <input
+            <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
+                <label className={styles.label}> 
+                                  
+                <TextField
+                    id="filled-basic"
+                    label="Email"
+                    //color="secondary"
+                    variant="standard"
+                    //focused 
                         type="email"
                         name="email"
                         value={email}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label style={styles.label}>
-                    password
-                    <input
+                    onChange={handleChange}
+                />
+                </label> 
+                <label className={styles.label}> 
+                <TextField
+                    id="filled-basic"
+                    label="Password"
+                    //color="secondary"
+                    variant="standard"
+                    //focused 
                         type="password"
                         name="password"
                         value={password}
                         onChange={handleChange}
                     />
                 </label>
-                <button type="submit">Log in</button>
+                <Button type="submit" variant="contained">Log in</Button>
             </form>
         </div>
     )

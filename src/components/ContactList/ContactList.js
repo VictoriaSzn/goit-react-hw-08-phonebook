@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteContact } from "redux/contacts/ContactsOperations";
 import { toast } from "react-toastify";
 import { confirmAlert } from "react-confirm-alert";
+import Button from '@mui/material/Button';
 
 export const ContactList = () => {
   //const { data } = useGetContactsQuery();
@@ -66,14 +67,15 @@ const submit = id => {
         <li key={id} className={styles.item}>
           {name + ": " + number}
           {
-            <button
+            <Button
+              variant="contained"
               className={styles.btn}
               type="button"
               name="delte"
               onClick={() => handleDelContact(id)}
             >
               delete
-            </button>
+            </Button>
           }
         </li>
       ))}

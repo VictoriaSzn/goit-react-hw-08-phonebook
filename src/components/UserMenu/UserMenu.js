@@ -1,21 +1,9 @@
 import { useDispatch } from "react-redux";
 import authOperations from "redux/auth/auth-operations";
 import { useAuth } from "hooks/useAuth";
-
+import styles from "../../components/Form.module.css";
+import Button from '@mui/material/Button';
 import defaultAvatar from './no-avatar.jpg';
-const styles = {
-    container: {
-        display: 'flex',
-        alignItems:'center',
-    },
-    avatar: {
-        marginRight: 4,
-    },
-    name: {
-        fontWeight:700,
-        marginRight: 4,
-    },
-};
 
 export default function UserMenu() {
     const dispatch = useDispatch();
@@ -24,10 +12,10 @@ export default function UserMenu() {
     const { user } = useAuth();
     const handleLogOut = () => dispatch(authOperations.logOut());
     return (
-        <div style={styles.container}>
-            <img src={avatar} alt="" width="32" style={styles.avatar} />
-            <p style={styles.name}>Welcome, {user.name}</p>
-            <button type="button"onClick={handleLogOut}>Logout</button>
+        <div className={styles.userMenuContainer}>
+            <img src={avatar} alt="" width="32" height="32'"className={styles.avatar} />
+            <p className={styles.name}>Welcome, {user.name}</p>
+            <Button type="button" variant="contained" onClick={handleLogOut}>Logout</Button>
         </div>
     );
 };

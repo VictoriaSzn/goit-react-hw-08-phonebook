@@ -2,16 +2,20 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 //import register from "redux/auth/auth-operations";
 import authOperations from "../redux/auth/auth-operations";
-const styles = {
-    form: {
-        width: 320,
-    },
-    label: {
-        display: 'flex',
-        flexDirection: 'column',
-        marginBottom: 15,
-    },
-};
+import styles from "../components/Form.module.css";
+import Button from '@mui/material/Button';
+import { TextField } from "@mui/material";
+
+// const styles = {
+//     form: {
+//         width: 320,
+//     },
+//     label: {
+//         display: 'flex',
+//         flexDirection: 'column',
+//         marginBottom: 15,
+//     },
+// };
 export default function RegisterView() {
     const dispatch = useDispatch();
     const [name, setName] = useState('');
@@ -45,37 +49,44 @@ const handleSubmit = evt => {
     setPassword('');
     };
     return (
-         <div>
+         <div className={styles.page}>
         <h1>Register page</h1>
-        <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-             <label style={styles.label}>
-                name
-                <input
+        <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
+             <label className={styles.label}>
+               
+                <TextField
+                    id="filled-basic"
+                    label="Name"
+                    variant="standard"
                     type="name"
                     name="name"
                     value={name}
                     onChange={handleChange}
                 />
             </label>
-            <label style={styles.label}>
-                email
-                <input
+            <label className={styles.label}>
+                  <TextField
+                    id="filled-basic"
+                    label="Email"
+                    variant="standard"
                     type="email"
                     name="email"
                     value={email}
                     onChange={handleChange}
                 />
             </label>
-             <label style={styles.label}>
-                password
-                <input
+             <label className={styles.label}>
+                 <TextField
+                    id="filled-basic"
+                    label="Password"
+                    variant="standard"
                     type="password"
                     name="password"
                     value={password}
                     onChange={handleChange}
                 />
                 </label>
-                <button type="submit">Register</button>
+                <Button type="submit" variant="contained">Register</Button>
         </form>
     </div>
     )

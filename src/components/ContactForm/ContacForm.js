@@ -4,6 +4,8 @@ import styles from "../Form.module.css";
 //import { getContactsQuery } from '../../redux/ContactSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/ContactsOperations';
+import Button from '@mui/material/Button';
+import { TextField } from "@mui/material";
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -46,11 +48,15 @@ export const ContactForm = () => {
     
         return (
           <form
+            className={styles.form}
            onSubmit={handleSubmit}
             autoComplete="off"
           >
-            <label className={styles.label}>Name
-            <input className={styles.input}
+            <label className={styles.label}>
+              <TextField className={styles.input}
+                 id="filled-basic"
+                    label="Contact name"
+                    variant="standard"
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -59,8 +65,11 @@ export const ContactForm = () => {
               value={name}
               onChange={handleChange} />
           </label>
-          <label className={styles.label}>Number
-            <input className={styles.input}
+          <label className={styles.label}>
+              <TextField className={styles.input}
+                 id="filled-basic"
+                    label="Phone number"
+                    variant="standard"
               type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -70,7 +79,7 @@ export const ContactForm = () => {
               onChange={handleChange}
             />
           </label>
-          <button type="submit" className={styles.btn}>Add contact</button>
+          <Button type="submit" variant="contained" className={styles.btn}>Add contact</Button>
         </form>
          );
     
