@@ -1,15 +1,5 @@
 import { NavLink } from "react-router-dom";
-
-const styles = {
-    link: {
-        padding:12,
-        fontWeight:700,
-        color:'#2a363b',
-    },
-    activeLink: {
-        color:'#e84a5f',
-    },
-};
+import styles from "../components/Form.module.css";
 
 export default function AuthNav() {
     return (
@@ -17,15 +7,17 @@ export default function AuthNav() {
             <NavLink
                 to="/register"
                 exact
-                style={styles.link}
-                activestyle={styles.activeLink}>
+                className={styles.link}
+                //activestyle={styles.activeLink}
+            >
                 Register
             </NavLink>
             <NavLink
                 to="/login"
                 exact
-                style={styles.link}
-                activestyle={styles.activeLink}>
+                className={styles.link}
+                //activestyle={styles.activeLink}
+            >
                 Log In
             </NavLink>
         </div>

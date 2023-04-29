@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'; 
 import { useDispatch } from 'react-redux';
 import { lazy } from 'react';
-//import { AppBar } from './AppBar';
+//import { AppBarMui } from './AppBarMui';
 import authOperations from 'redux/auth/auth-operations';
 import { useAuth } from 'hooks/useAuth';
 import PrivateRoute from './PrivateRoute';

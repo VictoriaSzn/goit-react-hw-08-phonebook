@@ -24,7 +24,7 @@ export const Contacts = () => {
           color: '#010101'
         }}>
           
-         <h1>Phonebook</h1>
+         <h1>Phone book</h1>
         <ContactForm/> 
         <Filter/>
         <ContactList/>

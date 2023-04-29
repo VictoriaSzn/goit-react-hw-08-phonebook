@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from 'react';
 import styles from "../Form.module.css";
 import { useDispatch, useSelector } from "react-redux";
 //import {useGetContactsQuery, useDeleteContactMutation} from "../../redux/contacts/ContactSlice";
@@ -6,6 +6,7 @@ import { deleteContact } from "redux/contacts/ContactsOperations";
 import { toast } from "react-toastify";
 import { confirmAlert } from "react-confirm-alert";
 import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const ContactList = () => {
   //const { data } = useGetContactsQuery();
@@ -69,10 +70,10 @@ const submit = id => {
           {
             <Button
               variant="contained"
-              className={styles.btn}
               type="button"
               name="delte"
               onClick={() => handleDelContact(id)}
+              startIcon={<DeleteIcon />}
             >
               delete
             </Button>
