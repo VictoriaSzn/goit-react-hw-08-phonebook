@@ -6,10 +6,10 @@ const book = openBookImg;
 const HomeView = () => (
     <div className={styles.container}>
         <h1 >
-           Home pages
+           Welcome to Phone book
         </h1>
         <div className={styles.homePage}>
-            <h2 > Welcome to Phone book</h2>
+          
         <p >
             To use the application, you need to log in or register. <br/>To quickly
             check the functionality, you can log in with a test login. 

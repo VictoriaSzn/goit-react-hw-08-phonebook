@@ -54,7 +54,8 @@ const handleSubmit = evt => {
         <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
              <label className={styles.label}>
                
-                <TextField
+                    <TextField
+                    sx={{'& > :not(style)': { fontSize: '25px' }, }}
                     id="filled-basic"
                     label="Name"
                     variant="standard"
@@ -65,7 +66,8 @@ const handleSubmit = evt => {
                 />
             </label>
             <label className={styles.label}>
-                  <TextField
+                    <TextField
+                    sx={{'& > :not(style)': { fontSize: '25px' }, }}
                     id="filled-basic"
                     label="Email"
                     variant="standard"
@@ -76,7 +78,8 @@ const handleSubmit = evt => {
                 />
             </label>
              <label className={styles.label}>
-                 <TextField
+                    <TextField
+                        sx={{'& > :not(style)': { fontSize: '25px' }, }}
                     id="filled-basic"
                     label="Password"
                     variant="standard"

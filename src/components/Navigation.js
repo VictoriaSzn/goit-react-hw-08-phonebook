@@ -2,19 +2,28 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "hooks/useAuth";
 import styles from "../components/Form.module.css";
+import styled from "styled-components";
 
+const StyledLink = styled(NavLink)`
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+&.active{
+    color: black;
+}`;
 const Navigation = () => {
     const { isLoggedIn } = useAuth();
     return (
         <nav>
-            <NavLink to="/" exact className={styles.link}  activeStyle={{fontWeight: "bold",color: "red" }}>
+            <StyledLink to="/" exact>
                 Home
-            </NavLink>
+            </StyledLink>
             
             {isLoggedIn && (
-                <NavLink to="/contacts" exact className={styles.link} activeClassName={styles.activeLink}>
+                <StyledLink to="/contacts" exact >
                   Phone book
-                </NavLink>
+                </StyledLink>
             )}
         </nav>
     );

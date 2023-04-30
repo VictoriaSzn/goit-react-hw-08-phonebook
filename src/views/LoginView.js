@@ -38,29 +38,27 @@ export default function LoginView() {
             <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
                 <label className={styles.label}> 
                                   
-                <TextField
+                    <TextField
+                    sx={{'& > :not(style)': { fontSize: '25px' }, }}
                     id="filled-basic"
                     label="Email"
-                    //color="secondary"
                     variant="standard"
-                    //focused 
-                        type="email"
-                        name="email"
-                        value={email}
+                    type="email"
+                    name="email"
+                    value={email}
                     onChange={handleChange}
                 />
                 </label> 
                 <label className={styles.label}> 
-                <TextField
+                    <TextField
+                    sx={{'& > :not(style)': { fontSize: '25px' }, }}
                     id="filled-basic"
                     label="Password"
-                    //color="secondary"
                     variant="standard"
-                    //focused 
-                        type="password"
-                        name="password"
-                        value={password}
-                        onChange={handleChange}
+                    type="password"
+                    name="password"
+                    value={password}
+                    onChange={handleChange}
                     />
                 </label>
                 <Button type="submit" variant="contained">Log in</Button>
